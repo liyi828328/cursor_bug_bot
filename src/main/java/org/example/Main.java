@@ -25,13 +25,9 @@ public class Main {
         String tel = "13800138000";
         System.out.println(DigestUtil.md5Hex(tel));
 
-        List<String> list = Arrays.asList("13800138000", "13800138001", "13800138002");
+        List<String> list = Arrays.asList(tel, "13800138001", "13800138002");
         for (String s : list) {
             System.out.println(DigestUtil.md5Hex(s));
-            if (s.equals("13800138000")) {
-                int a = 100/0;
-                System.out.println(a);
-            }
         }
         System.out.println("end");
     }
