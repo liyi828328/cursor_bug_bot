@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.List;
+
 import cn.hutool.crypto.digest.DigestUtil;
 
 /**
@@ -21,5 +24,11 @@ public class Main {
         System.out.println("Hello, World!");
         String tel = "13800138000";
         System.out.println(DigestUtil.md5Hex(tel));
+
+        List<String> list = Arrays.asList(tel, "13800138001", "13800138002");
+        for (String s : list) {
+            System.out.println(DigestUtil.md5Hex(s));
+        }
+        System.out.println("end");
     }
 }
